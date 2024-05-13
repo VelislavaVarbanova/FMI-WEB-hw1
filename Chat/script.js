@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const userData = {
         "user_id_1": { "full_name": "Velislava" },
         "user_id_2": { "full_name": "Nikola" },
-        "user_id_3": { "full_name": "Anna" }
+        "user_id_3": { "full_name": "Anna" },
+        "user_id_4": { "full_name": "Damyan" },
+        "user_id_5": { "full_name": "Ralitsa" }
     };
 
     const chatsData = {
@@ -33,12 +35,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 { message: 'How are you?', sender : 'user_id_1' },
                 { message: 'good, thanks!', sender : 'user_id_2' }
             ]
+        },
+        chat4: {
+            messages: [
+                { message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', sender: 'user_id_1' },
+                { message: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', sender: 'user_id_3' },
+                { message: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', sender: 'user_id_1' },
+                { message: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', sender: 'user_id_3' },
+                { message: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', sender: 'user_id_1' }
+            ]
+        },
+        chat5: {
+            messages: [
+                { message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', sender: 'user_id_2' },
+                { message: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', sender: 'user_id_1' },
+                { message: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', sender: 'user_id_2' },
+                { message: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', sender: 'user_id_1' },
+                { message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', sender: 'user_id_2' }
+            ]
         }
     };
 
     const chats = {
         chat1: { participants: ['user_id_1', 'user_id_2', 'user_id_3'] },
-        chat2: { participants: ['user_id_1', 'user_id_3'] }
+        chat2: { participants: ['user_id_1', 'user_id_2'] },
+        chat3: { participants: ['user_id_1', 'user_id_3'] },
+        chat4: { participants: ['user_id_1', 'user_id_4'] },
+        chat5: { participants: ['user_id_1', 'user_id_5'] }
     };
 
     function getUsersInChat(chatId) {
