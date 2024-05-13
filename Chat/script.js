@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatId = getChatIdFromURL(); 
 
     const userData = {
-        "user_id_1": { "full_name": "Velislva" },
+        "user_id_1": { "full_name": "Velislava" },
         "user_id_2": { "full_name": "Nikola" },
         "user_id_3": { "full_name": "Anna" }
     };
@@ -60,5 +60,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const messageClass = currentUser.uid === message.sender ? "sent" : "received";
         const messageElement = `<li class="${messageClass}"><span>${fullName}: </span>${message.message}</li>`;
         document.getElementById("messages").innerHTML += messageElement;
+
+        document.getElementById("message-btn").addEventListener("click", function(event) {
+            event.preventDefault();
+            const messageInput = document.getElementById("message-input").value;
+            if (messageInput.trim() !== "") {
+                const newMessage = {
+                    message: messageInput.trim(),
+                    sender: currentUser.uid
+                };
+                const fullName = userData[currentUser.uid].full_name;
+                const messageClass = "sent";
+                const messageElement = `<li class="${messageClass}"><span>${fullName}: </span>${newMessage.message}</li>`;
+                document.getElementById("messages").innerHTML += messageElement;
+    
+                document.getElementById("message-input").value = "";
+            }
+        });
     });
 });
