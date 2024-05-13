@@ -1,0 +1,55 @@
+.chats-title {
+    font-size: 30px;
+    margin: 14px;
+    color: var(--bg);
+    font-weight: 500;
+}
+
+p{
+    color: var(--main-col);
+}
+
+#chats-section {
+    padding: 30px;
+    margin: 20px;
+    border-radius: 16px;
+    border-color: var(--bg);
+    border-style: inset;
+    background-color: var(--main-col);
+    height: 70%;
+}
+
+#chats {
+    padding: 16px;
+    background-color: var(--bg); 
+    border-radius: 8px;
+    list-style-type: none;
+    height: 70%;
+    overflow-y: scroll;
+    scrollbar-color: var(--bg);
+    scrollbar-width: thin;
+}
+
+#chats li {
+    margin: 14px;
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#chats li:hover {
+    background-color: #afc38f;
+}
+
+.contact-name {
+    color: var(--main-col);
+    font-weight: 600;
+}
+
+.contact-message {
+    color: grey;
+    font-size: 16px;
+    padding: 0 ;
+}
